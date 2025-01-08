@@ -1,7 +1,16 @@
 import './App.css'
 import Card from './Components/Card'
+import ProductCard from './Components/ProductCard'
 
 function App() {
+
+  const JohnDoe = {
+    name: 'John Doe',
+    userProfile: 'https://images.unsplash.com/photo-1614644147724-2d4785d69962?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80',
+    projectTitleOne: 'Hello World!',
+    projectTitleTwo: 'Learning React',
+    projectDescription: 'Lorem ipsum dolor sit amet      consectetur adipisicing elit. Maxime consequuntur deleniti unde ab ut in!'
+  }
 
   const Angela = {
     username: 'Angela Gold',
@@ -9,11 +18,14 @@ function App() {
     profile: "https://images.pexels.com/photos/4492217/pexels-photo-4492217.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   }
 
+  // Made use of the default value of projectTitles
   const Grace = {
-    username: 'Grace Lin',
+    name: 'Grace Lin',
     post: 'Lead Developer',
-    profile: "https://images.pexels.com/photos/4474047/pexels-photo-4474047.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    userProfile: "https://images.pexels.com/photos/4474047/pexels-photo-4474047.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    projectDescription: 'Lorem ipsum dolor sit amet      consectetur adipisicing elit. Maxime consequuntur deleniti meta lora shaw'
   }
+  // Stop
 
   const Tokyo = {
     username: 'Tokyo Drift',
@@ -23,9 +35,11 @@ function App() {
   return (
     <>
       <h1 className='bg-slate-800 text-slate-500 font-semibold text-4xl rounded-lg py-3' >Vite + Tailwind</h1>
+      <ProductCard {...JohnDoe} />
+
       <Card {...Angela}/>
 
-      <Card  {...Grace} />
+      <ProductCard {...Grace} />
 
       <Card {...Tokyo} />
     </>
